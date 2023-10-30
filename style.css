@@ -1,10 +1,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900;1000&display=swap');
 
+@font-face {
+    font-family: "GT Maru";
+    font-weight: 400;
+    src: url('./fonts/GT-Maru-Regular.woff2') format("opentype");
+}
+
+@font-face {
+    font-family: "GT Maru";
+    font-weight: 500;
+    src: url('./fonts/GT-Maru-Medium.woff2') format("opentype");
+}
+
+@font-face {
+    font-family: "GT Maru";
+    font-weight: 700;
+    src: url('./fonts/GT-Maru-Bold.woff2') format("opentype");
+}
+
+@font-face {
+    font-family: "Lars Clubhouse";
+    font-weight: 400;
+    src: url('./fonts/LarsClubhouse-Regular.woff') format("woff");
+}
+
+
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Nunito', sans-serif;
+    font-family: "Nunito", "GT Maru", sans-serif;
 }
 
 html {
@@ -12,6 +38,7 @@ html {
 }
 
 :root {
+    --page1-color: #FBF8EF;
     --primary-color: #000000;
     --secondry-color: #DD6A1F;
     --white-color: #fff;
@@ -46,12 +73,38 @@ html {
     color: var(--white-color);
 }
 
+.main-btn-white {
+    height: 60px;
+    background-color: var(--white-color);
+    border-color: var(--primary-color);
+    /* border-width: 2px; */
+    /* border-style: solid; */
+    /* color: var(--primary-color); */
+    text-transform: lowercase;
+    border-radius: 9999px;
+    cursor: pointer;
+    min-height: 2rem;
+    border: none;
+    transition: all 0.5s ease 0s;
+    padding: 0.5rem 1.5rem;
+    min-width: 8rem;
+    font-size: 1.06rem;
+    font-family: Nunito, sans-serif;
+    font-weight: 800;
+    /* border: 0.14rem solid var(--white-color); */
+}
+
+.main-btn-white:hover {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
 
 
 
 #part1 {
     height: 100vh;
-    background-color: #FBF8EF;
+    background-color: var(--page1-color);
 }
 
 /* .s1padding {
@@ -116,7 +169,7 @@ header {
 }
 
 
-#main {
+#page1 {
     width: 100vw;
     height: 100vh;
 }
@@ -128,6 +181,7 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: fixed;
 }
 
 
@@ -150,6 +204,13 @@ header {
         transform: translateY(-15px);
     }
 }
+
+
+.ch-action-text-container {
+    font-size: 72px;
+}
+
+
 
 #footer {
     position: fixed;
@@ -203,7 +264,7 @@ element.style {
     border-radius: 50% 50% 0 0;
     visibility: visible;
     z-index: 9999;
-    animation: 1s ease-out 0s 1 normal none running quick-slide-bottom;
+    animation: 2.5s ease-out 0s 1 normal none running quick-slide-bottom;
     mask-image: paint(smooth-corners);
     -webkit-mask-image: paint(smooth-corners);
     --smooth-corners: 1.3;
@@ -232,4 +293,35 @@ element.style {
     font-weight: 700;
     text-align: center;
     margin-top: 10px;
+}
+
+
+
+#part2 {
+    height: 100vh;
+    background-color: #FFE450;
+}
+
+#contentpage2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#contentText p {
+    font-family: "GT Maru", "Nunito", sans-serif;
+    font-weight: 750;
+    /* font-weight: 700; */
+    font-size: 78px;
+    text-align: center;
+    /* margin: 12px 24px; */
+    line-height: 110%;
+    letter-spacing: -0.04em;
+    /* letter-spacing: -0.09em; */
+    /* max-width: 1067px; */
+}
+
+#contentButton {
+    margin-top: 42px;
 }
