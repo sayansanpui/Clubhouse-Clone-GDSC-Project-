@@ -169,12 +169,12 @@ header {
 }
 
 
-#page1 {
+#main {
     width: 100vw;
     height: 100vh;
 }
 
-#content {
+.content {
     width: 100%;
     height: 100%;
     display: flex;
@@ -184,8 +184,19 @@ header {
     position: fixed;
 }
 
+#contentpage1 {
+    /* display: block; */
+}
 
-#topText img {
+#topText {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#topText .upText {
     /* width: 36vw; */
     /* width: 33rem; */
     height: 96px;
