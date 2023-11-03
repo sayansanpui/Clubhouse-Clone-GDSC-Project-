@@ -1,15 +1,14 @@
 
 
 
-gsap.to("#downText img", {
+gsap.to("#downText", {
     opacity: 0,
-    duration: 0.7, 
     scrollTrigger: {
-        trigger: "#downText img",
+        trigger: "#downText",
         scroller: "body",
         // markers: true,
-        start: "top 65%",
-        end: "top 62%",
+        start: "top 57%",
+        end: "top 53%",
         scrub: true
     }
 })
@@ -37,8 +36,8 @@ gsap.to("#contentpage1", {
         trigger: "#contentpage1",
         scroller: "body",
         // markers: true,
-        start: "top -20%",
-        end: "top -30%",
+        start: "top -40%",
+        end: "top -55%",
     }
 })
 
@@ -56,8 +55,21 @@ gsap.from("#contentpage2", {
         trigger: "#contentpage1",
         scroller: "body",
         // markers: true,
-        start: "top -20%",
-        end: "top -30%",
+        start: "top -40%",
+        end: "top -55%",
+    }
+})
+
+gsap.to("#contentButton", {
+    backgroundColor: "#fff",
+    color: "#000",
+    scrollTrigger: {
+        trigger: "#contentButton",
+        scroller: "body",
+        // markers: true,
+        start: "top 0%",
+        end: "top 0%",
+        scrub: true
     }
 })
 
@@ -68,8 +80,8 @@ gsap.to(".scroll", {
         trigger: "#contentpage1",
         scroller: "body",
         // markers: true,
-        start: "top -20%",
-        end: "top -30%",
+        start: "top -40%",
+        end: "top -55%",
     }
 })
 
